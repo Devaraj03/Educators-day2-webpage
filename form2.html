@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+<div style="text-align: center
+;">
+    <h2>Registration Form</h2>
+    <hr>
+    <form>
+        <div class="content">
+        <label for="name" style="padding-right: 90px;">Name :</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+        <br/>
+        <div class="content">
+        <label for="password" style="padding-right: 67px;">Password :</label>
+        <input id="password" type="password" placeholder="Enter your password" required>
+        </div>
+        <br/>
+        <div>
+            <label for="email" style="padding-right: 90px;">Email :</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
+        </div>
+        <br/>
+        <div>
+            <label for="mnumber" style="padding-right: 26px;">Mobile Number :</label>
+            <input id="mnumber" type="number" placeholder="Enter your mobile number" required>
+        </div>
+        <br/>
+        <div style="padding-right: 62px;">
+            <label for="date" style="padding-right: 47px;">Date of birth :</label>
+            <input id="date" type="date" required>
+        </div>
+        <br/>
+        <div style="padding-right: 85px;padding-left: 4px;">
+            <label for="place" style="padding-right: 93px;">Place :</label>
+            <select id="place" onchange="otherplacefunc()" style="text-align: left;width: 21%;" required>
+                <option>---------</option>
+                <option>Ariyaloor</option>
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Dindugal</option>
+                <option>Madurai</option>
+                <option>Salem</option>
+                <option value="others">Others</option>
+            </select>
+            <br/>
+            <br/>
+            <div   id=otherplace style="display: none;padding-left: 77px;">
+                <label for ="other" style="padding-right: 49px ;">Other place :</label>
+                <input  id=other type="text">
+            </div>
+        </div>
+        
+        <div style="padding-right: 59px;padding-left: 6px;">
+            <label style="padding-right: 76px;">Gender :</label>
+            <input id="male" type="radio" name="gender">
+            <label for="male">Male</label>
+            <input id="female" type="radio" name="gender">
+            <label for="female">Female</label>
+        </div>
+        <br/>
+        <div style="padding-left: 94px;">
+        <div class="checkboxes">
+            <label style="padding-right: 85px;">Skills :</label>
+            <input id="checkbox-1" type="checkbox">
+            <label for="checkbox-1">Python</label>
+            <input id="checkbox-2" type="checkbox">
+            <label for="checkbox-2">Java</label>
+            <input id="checkbox-3" type="checkbox">
+            <label for="checkbox-3">Dotnet</label>
+            <input id="checkbox-4" type="checkbox">
+            <label for="checkbox-4">Node JS</label>
+            <br/>
+            <div style="padding-right: 36px;">
+            <input id="checkbox-5" type="checkbox" style="padding-left: 110px;">
+            <label for="checkbox-5" >Git & Github</label>
+            </div> 
+        </div>
+        </div>
+        <br/>
+        <div style="padding-right: 186px;padding-left: 2px;">
+        <label for="textarea" style="padding-right: 38px;padding-top: 3300px;">About yourself :</label>
+        <textarea type="text" cols=25 rows="8" style="position: fixed; resize:none;"> </textarea>
+        </div> 
+        <div style="padding-top: 125px">
+            <button id="submit" type="submit">Submit</button>
+        </div> 
+        </form>
+</div>
+</body>
+<script>
+    function otherplacefunc(){
+        select=document.getElementById("place")
+        otherplace=document.getElementById("otherplace")
+
+        if (select.value==="others"){
+            otherplace.style.display="block";
+        }
+        else{
+            otherplace.style.display="none";
+        }
+    }
+</script>    
+</html>
